@@ -1,7 +1,7 @@
 " # Sugar neovim configuration
 "
 " File: init.vim
-" Author: Dawid Żółnowski
+" Author: DŻ
 " Date: Sun, 01 Oct 2017 20:13:30
 "
 " This is file is part of the personal Windows neovim configuration
