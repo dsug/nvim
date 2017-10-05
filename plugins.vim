@@ -1,7 +1,7 @@
 " # Sugar neovim configuration
 "
 " File: plugins.vim
-" Author: Dawid Żółnowski
+" Author: DŻ
 " Date: Sun, 01 Oct 2017 22:13:44
 "
 " This is file is part of the personal Windows neovim configuration
@@ -11,7 +11,7 @@
 "
 " Plugins are managed by vim-plug.
 
-call plug#begin('C:\Neovim\plugged')
+call plug#begin('~/home/dsug/nvim-pluggins/')
 
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
