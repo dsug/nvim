@@ -10,15 +10,15 @@
 " ## Generic Settings
 "
 " Set vim directory path
-let $VIMPATH='C:\Users\sugar\AppData\Local\nvim'
+let $VIMPATH='~/home/dsug'
 
 " ## Key Mappings
 "
-source $VIMPATH\mappings.vim
+source $VIMPATH/mappings.vim
 
 " ## Plugins
 "
-source $VIMPATH\plugins.vim
+source $VIMPATH/plugins.vim
 
 
 "*****************************************************************************
