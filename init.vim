@@ -10,7 +10,7 @@
 " ## Generic Settings
 "
 " Set vim directory path
-let $VIMPATH='~/home/dsug'
+let $VIMPATH='~/.config/nvim'
 
 " ## Key Mappings
 "
@@ -24,7 +24,7 @@ source $VIMPATH/plugins.vim
 "*****************************************************************************
 " Basic Setup
 "*****************************************************************************
-
+set termguicolors
 set ttimeout
 set ttimeoutlen=10
 

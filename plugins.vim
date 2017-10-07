@@ -11,7 +11,7 @@
 "
 " Plugins are managed by vim-plug.
 
-call plug#begin('~/home/dsug/nvim-pluggins/')
+call plug#begin('~/nvim-pluggins/')
 
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
