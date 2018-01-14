@@ -38,6 +38,9 @@ let mapleader = ","
 map <Leader>d :read !date --rfc-3339=date<CR>kJ$
 map <Leader>D :read !date -R<CR>kJ
 
+" Shortcuts
+" Use ; for commands
+nnoremap ; :
 " Reformat text
 map <Leader>f gq}
 map <Leader>F gqG
@@ -60,8 +63,32 @@ inoremap <C-W> <C-G>u<C-W>
 map <Leader>a ggVG"+y
 
 " ctrl.vim settings
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>f :CtrlPMRUFiles<CR>
+
+" Relative number func call
+nnoremap <leader>r :call NumberToggle()<cr>
+
+" VimWiki mappings
+map <Leader>tt <Plug>VimwikiToggleListItem
+map <Leader><Space> <Plug>VimwikiRemoveSingleCB
+map <Leader><Space> <Plug>VimwikiRemoveCBInList
+
+" Switching between tabs
+tnoremap <A-h> <C-\><C-N><C-w>h
+tnoremap <A-j> <C-\><C-N><C-w>j
+tnoremap <A-k> <C-\><C-N><C-w>k
+tnoremap <A-l> <C-\><C-N><C-w>l
+inoremap <A-h> <C-\><C-N><C-w>h
+inoremap <A-j> <C-\><C-N><C-w>j
+inoremap <A-k> <C-\><C-N><C-w>k
+inoremap <A-l> <C-\><C-N><C-w>l
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+
 " Classical Copy/Cut/Paste
 "
 " I do not use these mappings, but I leave them here in case

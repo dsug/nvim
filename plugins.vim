@@ -21,9 +21,14 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets' 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'dracula/vim'
-Plug 'gregsexton/MatchTag'
+"Plug 'gregsexton/MatchTag'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dracula/vim'
+Plug 'kopischke/vim-stay'
+
+" Org-mode plugins
+Plug 'vimwiki/vimwiki'
+Plug 'mattn/calendar-vim'
 "Plug 'tpope/vim-fugitive'
 "Plug 'airblade/vim-gitgutter'
 "Plug 'ervandew/supertab'
@@ -41,10 +46,42 @@ let NERDTreeCaseSensitiveSort = 1
 "
 map <F9> :NERDTreeToggle <CR>
 
+" NERDCommenter
+"
+"
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code
+" indentation
+let g:NERDDefaultAlign = 'left'
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Syntastic
+"
+"
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = " "
+
 " Deoplete
 "
 "
-call deoplete#enable()
+let g:deoplete#enable_at_startup = 1
 
 " UltiSnips: snippets engine
 "
@@ -61,15 +98,29 @@ nnoremap <Leader>se :UltiSnipsEdit<cr>
 let g:airline_theme='dracula'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#tabline#fnameod = ':t'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#right_sep = ' '
+let g:airline#extensions#tabline#right_alt_sep = '|'
 let g:airline_skip_empty_sections = 1
- 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+let g:airline#extensions#tabline#enabled = 0 
 
+let g:airline_left_sep = ' '
+let g:airline_left_alt_sep = '|'
+let g:airline_right_sep = ' '
+let g:airline_right_alt_sep = '|'
 
 
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_cpp_checkers = ['clang_check']
+
+" Vim-orgmode
+"
+"
+
+" CtrlP settings
+"
+"
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
